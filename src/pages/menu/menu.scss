@@ -1,0 +1,32 @@
+.menu-list-container {
+  padding: 20px;
+  padding-bottom: 168px;
+  .menu-list-item {
+    padding-bottom: 20px;
+    .imgBox {
+      height: 0;
+      font-size: 0;
+      padding-bottom: 66.66666%;
+      position: relative;
+      image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      }
+    }
+    .title {
+      height: 80px;
+      text-align: center;
+      line-height: 80px;
+      font-size: 36px;
+      color: #ee7530;
+    }
+    .subtitle {
+      font-size: 28px;
+      color: #666;
+      text-align: center;
+    }
+  }
+}

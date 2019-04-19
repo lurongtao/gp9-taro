@@ -9,7 +9,7 @@ class App extends Component {
       "pages/index/index"
     ],
     window: {
-      navigationBarBackgroundColor: '#6435c9'
+      navigationBarBackgroundColor: '#ee7530'
     }
   }
 
