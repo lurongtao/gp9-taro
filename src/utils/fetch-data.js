@@ -1,7 +1,5 @@
 import Taro from '@tarojs/taro'
 
-const URL = 'http://localhost:9000'
-
 export default ({
   url = URL,
   method = 'GET',

@@ -6,10 +6,13 @@ import './app.scss'
 class App extends Component {
   config = {
     pages: [
-      "pages/index/index"
+      "pages/index/index",
+      "pages/detail/index"
     ],
     window: {
-      navigationBarBackgroundColor: '#ee7530'
+      navigationBarBackgroundColor: '#ee7530',
+      navigationBarTitleText: '菜单',
+      enablePullDownRefresh: true
     }
   }
 

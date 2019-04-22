@@ -15,7 +15,9 @@
     "dev:alipay": "npm run build:alipay -- --watch",
     "dev:tt": "npm run build:tt -- --watch",
     "dev:h5": "npm run build:h5 -- --watch",
-    "dev:rn": "npm run build:rn -- --watch"
+    "dev:rn": "npm run build:rn -- --watch",
+    "dev:mock:db1": "json-server ./src/mock/cookbook-list.json --watch --port 9000",
+    "dev:mock:db2": "json-server ./src/mock/cookbook-detail.json --watch --port 9001"
   },
   "author": "",
   "license": "MIT",
@@ -31,6 +33,7 @@
     "@tarojs/taro-swan": "1.2.26",
     "@tarojs/taro-tt": "1.2.26",
     "@tarojs/taro-weapp": "1.2.26",
+    "lodash": "^4.17.11",
     "nerv-devtools": "^1.3.9",
     "nervjs": "^1.3.9",
     "redux": "^4.0.0",

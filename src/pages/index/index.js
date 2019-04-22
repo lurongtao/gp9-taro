@@ -7,7 +7,8 @@ import Profile from '../profile/'
 
 class Index extends Component {
   state = {
-    current: 0
+    current: 0,
+    pulling: false
   }
 
   handleClick(current) {
@@ -16,10 +17,24 @@ class Index extends Component {
     })
   }
 
+  handleFinished() {
+    Taro.stopPullDownRefresh()
+  }
+
+  onReachBottom() {
+    console.log('reach bottom.')
+  }
+
+  onPullDownRefresh() {
+    this.setState({
+      pulling: true
+    })
+  }
+
   render() {
     return (
       <View>
-        { this.state.current === 0 && <Menu /> }
+        { this.state.current === 0 && <Menu pulling={this.state.pulling} onFinished={this.handleFinished} /> }
         { this.state.current === 1 && <Order /> }
         { this.state.current === 2 && <Profile /> }
         <AtTabBar
