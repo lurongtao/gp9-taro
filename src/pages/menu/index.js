@@ -54,9 +54,9 @@ class Menu extends Component {
     this.fetchData({ _page: 1 })
   }
 
-  handleClickItem() {
+  handleClickItem(id) {
     Taro.navigateTo({
-      url: '../detail/index?id=1'
+      url: '../detail/index?id=' + id
     })
   }
 
@@ -78,7 +78,7 @@ class Menu extends Component {
                 <View 
                   key={value.id} 
                   className="menu-list-item"
-                  onClick={this.handleClickItem.bind(this)}
+                  onClick={this.handleClickItem.bind(this, value.id)}
                 >
                   <View className="imgBox">
                     <image mode="aspectFit" src={value.img}></image>

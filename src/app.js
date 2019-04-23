@@ -1,7 +1,11 @@
 import Taro, { Component } from '@tarojs/taro'
 import Index from './pages/'
 
+import { Provider } from '@tarojs/redux'
+import configStore from './store/'
 import './app.scss'
+
+const store = configStore()
 
 class App extends Component {
   config = {
@@ -18,7 +22,9 @@ class App extends Component {
 
   render() {
     return (
-      <Index></Index>
+      <Provider store={store}>
+        <Index></Index>
+      </Provider>
     )
   }
 }
